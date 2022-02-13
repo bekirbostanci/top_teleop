@@ -58,15 +58,15 @@ class TopTeleop(Node):
         self.control_angular_vel = 0.0
     
         listener = Listener(
-        on_press=self.on_press,
-        on_release=self.on_release)
+        on_press=self.onPress,
+        on_release=self.onRelease)
         listener.start()
 
         self.cmd_vel_publisher = self.create_publisher(Twist, "cmd_vel", 10)
         self.create_timer(0.1, self.cmd_vel_loop)
 
     def cmd_vel_loop(self):
-        key = self.get_key()
+        key = self.getKey()
         if key == 'w' :
             self.target_linear_vel = self.checkLinearLimitVelocity(self.target_linear_vel + LIN_VEL_STEP_SIZE)
             self.status = self.status + 1
@@ -122,7 +122,7 @@ class TopTeleop(Node):
 
         return input
 
-    def on_press(self, key):
+    def onPress(self, key):
         # to remove input buffer
         if os.name == 'nt':
             msvcrt.getch() 
@@ -145,10 +145,10 @@ class TopTeleop(Node):
             self.key = key.char
         return self.key
 
-    def get_key(self):
+    def getKey(self):
         return self.key
 
-    def on_release(self, key):
+    def onRelease(self, key):
         self.key = ""
         return ""
 
