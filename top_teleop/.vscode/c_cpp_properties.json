@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/ieu/ros2_ws/install/turtlebot3_fake_node/include/**",
+        "/home/ieu/ros2_ws/install/turtlebot3_msgs/include/**",
+        "/home/ieu/ros2_ws/install/turtlebot3_gazebo/include/**",
+        "/home/ieu/ros2_ws/install/dynamixel_sdk/include/**",
+        "/opt/ros/foxy/include/**",
+        "/home/ieu/ros2_ws/src/turtlebot3/turtlebot3_node/include/**",
+        "/home/ieu/ros2_ws/src/turtlebot3_simulations/turtlebot3_fake_node/include/**",
+        "/home/ieu/ros2_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
